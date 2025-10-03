@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #18294d;
+  --primary-dark: #101c36;
+  --primary-light: #2a3f6d;
+  --accent: #c7a565;
+  --background: #f5f6fa;
+  --surface: #ffffff;
+  --text: #1b1d23;
+  --text-muted: #5d6374;
+  --border: rgba(24, 41, 77, 0.12);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color-scheme: light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 4vw;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(24, 41, 77, 0.2);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 3rem 4vw 3rem;
+  background: linear-gradient(135deg, rgba(24, 41, 77, 0.95), rgba(24, 41, 77, 0.75)), url('./assets/FotoPerfil.jpeg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 560px;
+}
+
+.hero-kicker {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.hero-description {
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-profile {
+  justify-self: end;
+}
+
+.hero-profile img {
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(9, 16, 30, 0.45);
+  max-width: 320px;
+}
+
+.section {
+  padding: 4.5rem 4vw;
+}
+
+.section-header {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--primary-dark);
+}
+
+.section p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.area-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.area-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px rgba(24, 41, 77, 0.08);
+}
+
+.area-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.area-card p {
+  margin: 0;
+}
+
+.about {
+  background: var(--surface);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 1.75rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+.about-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.about-images {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.profile-photo {
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(24, 41, 77, 0.15);
+  max-width: 320px;
+}
+
+.credential-card {
+  background: var(--background);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(24, 41, 77, 0.08);
+}
+
+.credential-card img {
+  margin: 0 auto 1rem;
+  max-width: 180px;
+  border-radius: 12px;
+}
+
+.credential-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.commitment {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.commitment-card {
+  margin: -3rem auto 0;
+  background: linear-gradient(135deg, rgba(24, 41, 77, 0.95), rgba(24, 41, 77, 0.85));
+  color: #fff;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 960px;
+  box-shadow: 0 30px 60px rgba(9, 16, 30, 0.45);
+}
+
+.commitment-card h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.commitment-card p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(4px);
+  font-size: 0.85rem;
+}
+
+.contact {
+  background: var(--surface);
+}
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(24, 41, 77, 0.12);
+  display: grid;
+  gap: 2.5rem;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contact-item strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--primary);
+}
+
+.contact-item a,
+.contact-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2.5rem 4vw;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  border: none;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  box-shadow: 0 15px 30px rgba(199, 165, 101, 0.35);
+}
+
+.button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(199, 165, 101, 0.4);
+}
+
+.button.outline {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: transparent;
+}
+
+.button.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.button.full {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    margin-top: 1.25rem;
+  }
+
+  .hero-profile {
+    justify-self: center;
+    order: -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-card {
+    margin-top: -2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 1rem 5vw;
+  }
+
+  .hero {
+    padding: 3.5rem 5vw 2.5rem;
+  }
+
+  .section {
+    padding: 3.5rem 5vw;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-profile img,
+  .profile-photo {
+    max-width: 260px;
+  }
+
+  .contact-card {
+    padding: 2rem;
+  }
+}
