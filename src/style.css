@@ -228,6 +228,18 @@ img {
   margin: 0;
 }
 
+.area-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.area-card li {
+  line-height: 1.6;
+}
+
 .about {
   background: var(--surface);
 }
